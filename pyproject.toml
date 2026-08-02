@@ -1,0 +1,40 @@
+[project]
+name = "clinical-semantic-kg"
+version = "0.1.0"
+description = "Clinical Hybrid Multi-Agent RDF Knowledge Graph Platform"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Y P Consulting Services" }]
+dependencies = [
+    "google-adk",
+    "pydantic>=2.0",
+    "pydantic-settings",
+    "rdflib",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "ruff",
+    "mypy",
+]
+
+[project.scripts]
+kg-extract = "tools.kg_extract:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest",
+    "ruff",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
