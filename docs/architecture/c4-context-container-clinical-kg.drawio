@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="C4 Context and Container - Clinical Semantic KG Platform">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="C4 Architecture - Clinical Semantic Knowledge Graph Platform  (Context + Container Views)" style="rounded=0;fontStyle=1;fontSize=15;align=center;fillColor=#1a365d;strokeColor=#1a365d;fontColor=#ffffff;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="15" width="1620" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="C4 CONTEXT VIEW" style="rounded=0;fontStyle=1;fontSize=13;align=left;fillColor=#edf2f7;strokeColor=#4a5568;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="800" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="Clinicians and&#xa;Care Teams" style="rounded=1;fontSize=11;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#1a202c;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="60" y="140" width="130" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="Data Scientists&#xa;and Informaticians" style="rounded=1;fontSize=11;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#1a202c;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="60" y="240" width="130" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="Platform Admins&#xa;and Knowledge&#xa;Engineers" style="rounded=1;fontSize=11;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#1a202c;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="60" y="340" width="130" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" value="Clinical Semantic&#xa;KG Platform&#xa;&#xa;[Software System]&#xa;&#xa;Hybrid multi-agent extraction&#xa;of RDF knowledge graphs from&#xa;Epic, CCDS and clinical data&#xa;to power a hospital semantic layer" style="rounded=1;fontSize=12;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#1a202c;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="280" y="180" width="280" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="Epic EHR&#xa;(FHIR + BigQuery)" style="rounded=1;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1a202c;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="650" y="120" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" value="Care Everywhere&#xa;/ CCDS Sources" style="rounded=1;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1a202c;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="650" y="210" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="Other Clinical and&#xa;Analytics Systems" style="rounded=1;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1a202c;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="650" y="300" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" value="Argilla&#xa;(Human Review)" style="rounded=1;fontSize=11;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#1a202c;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="650" y="390" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" value="C4 CONTAINER VIEW" style="rounded=0;fontStyle=1;fontSize=13;align=left;fillColor=#edf2f7;strokeColor=#4a5568;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="880" y="80" width="780" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" value="Ingestion and&#xa;Adapter Service&#xa;[Container]&#xa;FHIR / C-CDA / BQ&#xa;adapters to unified view" style="rounded=1;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1a202c;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="900" y="130" width="180" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" value="Agent Orchestrator&#xa;[Container]&#xa;Google ADK + LangGraph&#xa;Intent / Tool Selector&#xa;Workflow Runtime + CLI" style="rounded=1;fontSize=11;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#1a202c;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="130" width="200" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="15" value="Extraction Workers&#xa;[Container]&#xa;Classical NLP channel&#xa;Multi-agent extractors&#xa;Coreference / Reconcile" style="rounded=1;fontSize=11;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#1a202c;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="900" y="260" width="180" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="16" value="RDF Pipeline&#xa;[Container]&#xa;Grounding (OAKlib)&#xa;Triple gen + SHACL&#xa;Trusted KG store" style="rounded=1;fontSize=11;fillColor=#b2f5ea;strokeColor=#319795;fontColor=#1a202c;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="260" width="200" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="17" value="HITL Service&#xa;[Container]&#xa;Argilla integration&#xa;Review queues and&#xa;feedback loop" style="rounded=1;fontSize=11;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#1a202c;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="900" y="390" width="180" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="18" value="Query and App API&#xa;[Container]&#xa;SPARQL / GraphQL&#xa;GraphRAG endpoints&#xa;CDS hooks" style="rounded=1;fontSize=11;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#1a202c;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="390" width="200" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="19" value="C4 Legend&#xa;• Context: people and external systems that interact with the platform&#xa;• Container: major deployable / runnable units inside the platform&#xa;• All containers are orchestrated via ADK CLI + Workflow Runtime&#xa;• 3rd-party tools (spaCy, OntoGPT...) are called as CLI tools from Extraction Workers" style="rounded=1;fontSize=11;align=left;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#1a202c;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="900" y="520" width="500" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="20" value="ARCHITECTURE DECISION HIGHLIGHT&#xa;&#xa;CLI-first tool wrapping (OntoGPT CLI, spaCy pipelines,&#xa;pySHACL CLI, etc.) is preferred over heavy in-process&#xa;libraries so that agents spend fewer tokens, have&#xa;deterministic control, and can version / sandbox each tool." style="rounded=1;fontSize=12;align=left;fillColor=#b2f5ea;strokeColor=#319795;fontColor=#1a202c;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="400" height="120" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
