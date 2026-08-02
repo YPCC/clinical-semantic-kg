@@ -1,0 +1,1 @@
+"""Coreference & Entity Resolution Agent."""
