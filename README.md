@@ -5,6 +5,21 @@ Driving a hospital-wide semantic layer from Epic, Care Everywhere (CCDS), and cl
 
 ---
 
+## Vision
+
+Hospitals sit on a goldmine of fragmented data—Epic FHIR and BigQuery, Care Everywhere CCDS, clinical notes, labs, imaging, pharmacy, and reference terminologies. The vision of **Clinical Semantic KG** is to turn that fragmentation into a living, hospital-wide **RDF semantic layer**: a single, provenanced, queryable source of truth that powers Clinical Decision Support, GraphRAG, cohort discovery, pharmacovigilance, and interoperability.
+
+What makes this project distinctive is *how* we propose to build it. Instead of a multi-year hand-crafted pipeline, we systematically harness **multi-agent systems** and the **Agent Development Lifecycle (AI DLC)** with Google ADK and Agents CLI. Specialist agents (document understanding, entity & relationship extraction, provenance, reconciliation, SHACL validation) are orchestrated, tools are called via clean CLI wrappers, quality is gated by SHACL + Argilla human review, and the whole stack remains extensible and deployable to Cloud Run / Agent Runtime / GKE. The result is a rapid, governable path from heterogeneous clinical data to an enterprise semantic layer.
+
+**Two views of the enterprise architecture:**
+
+1. **Enterprise Layered Architecture** — six layers from Source Systems & Data → Connectivity & Ingestion → Agentic Orchestration & Processing → Semantic Control & Quality Gates → Semantic Knowledge Layer → Consumption & Institutional Value, with cross-cutting Platform/DevOps and Trust/Governance/Security columns.
+2. **C4 Context Diagram** — the Clinical Semantic KG Platform at the centre, surrounded by clinical source systems, human stakeholders (clinicians, researchers, ontology stewards, governance), downstream applications (CDS, GraphRAG, cohort discovery, pharmacovigilance, interoperability), and the supporting tooling (source adapters, hybrid knowledge generation, semantic control).
+
+These two figures capture the full organisational scope and the agentic engine that realises it.
+
+---
+
 ## Current State of the Repository (as of 2026-08-02)
 
 This repository is in the **architecture + scaffolding** phase.
@@ -108,10 +123,6 @@ agents-cli scaffold enhance --deployment-target cloud_run
 6. Configure Argilla and a basic SHACL shapes registry.
 
 ---
-
-## Vision
-
-Turn heterogeneous hospital data (Epic FHIR + BigQuery, Care Everywhere CCDS, unstructured notes, analytics databases) into a high-quality, provenanced **RDF/RDFS knowledge graph** that becomes the institution’s **semantic layer** for Clinical Decision Support, GraphRAG, cohort discovery, pharmacovigilance, and interoperability.
 
 ## Core Strengths
 
