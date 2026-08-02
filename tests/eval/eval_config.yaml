@@ -1,0 +1,6 @@
+# Agents CLI evaluation configuration
+# See Google Agents CLI docs for full schema
+metrics:
+  - name: entity_precision
+  - name: relation_recall
+  - name: shacl_conformance
