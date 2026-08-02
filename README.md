@@ -11,10 +11,17 @@ Hospitals sit on a goldmine of fragmented data—Epic FHIR and BigQuery, Care Ev
 
 What makes this project distinctive is *how* we propose to build it. Instead of a multi-year hand-crafted pipeline, we systematically harness **multi-agent systems** and the **Agent Development Lifecycle (AI DLC)** with Google ADK and Agents CLI. Specialist agents (document understanding, entity & relationship extraction, provenance, reconciliation, SHACL validation) are orchestrated, tools are called via clean CLI wrappers, quality is gated by SHACL + Argilla human review, and the whole stack remains extensible and deployable to Cloud Run / Agent Runtime / GKE. The result is a rapid, governable path from heterogeneous clinical data to an enterprise semantic layer.
 
-**Two views of the enterprise architecture:**
+### Enterprise Layered Architecture
 
-1. **Enterprise Layered Architecture** — six layers from Source Systems & Data → Connectivity & Ingestion → Agentic Orchestration & Processing → Semantic Control & Quality Gates → Semantic Knowledge Layer → Consumption & Institutional Value, with cross-cutting Platform/DevOps and Trust/Governance/Security columns.
-2. **C4 Context Diagram** — the Clinical Semantic KG Platform at the centre, surrounded by clinical source systems, human stakeholders (clinicians, researchers, ontology stewards, governance), downstream applications (CDS, GraphRAG, cohort discovery, pharmacovigilance, interoperability), and the supporting tooling (source adapters, hybrid knowledge generation, semantic control).
+Six layers from Source Systems & Data → Connectivity & Ingestion → Agentic Orchestration & Processing → Semantic Control & Quality Gates → Semantic Knowledge Layer → Consumption & Institutional Value, with cross-cutting Platform/DevOps and Trust/Governance/Security columns.
+
+![Enterprise Layered Architecture](docs/architecture/images/enterprise-layered-architecture.jpg)
+
+### C4 Context Diagram
+
+The Clinical Semantic KG Platform at the centre, surrounded by clinical source systems, human stakeholders (clinicians, researchers, ontology stewards, governance), downstream applications (CDS, GraphRAG, cohort discovery, pharmacovigilance, interoperability), and the supporting tooling (source adapters, hybrid knowledge generation, semantic control).
+
+![C4 Context Diagram](docs/architecture/images/c4-context-diagram.jpg)
 
 These two figures capture the full organisational scope and the agentic engine that realises it.
 
