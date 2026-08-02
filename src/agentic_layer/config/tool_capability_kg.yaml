@@ -1,0 +1,19 @@
+# Tool Capability Knowledge Base
+# Describes what each extractor / channel is good at.
+# Used by the Intent & Tool Selector Agent.
+
+tools:
+  classical_nlp:
+    description: "High-precision clinical NER/RE via spaCy/SciSpaCy/GLiNER/MedSpaCy/SapBERT"
+    strengths: ["precision", "low_cost", "clinical_entities", "abbreviation_expansion"]
+    best_for: ["progress_notes", "pathology", "discharge_summaries"]
+
+  ontogpt:
+    description: "Template-driven SPIRES extraction + ontology grounding"
+    strengths: ["structured_output", "grounding", "LinkML_schemas"]
+    best_for: ["guidelines", "knowledge_articles", "templated_content"]
+
+  itext2kg:
+    description: "Prompt-driven incremental zero-shot KG construction"
+    strengths: ["coverage", "open_relations", "incremental"]
+    best_for: ["unstructured_narrative", "complex_relations"]
